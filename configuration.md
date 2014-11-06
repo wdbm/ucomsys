@@ -1,0 +1,13 @@
+- launchers
+   - terminal
+       - command: gnome-terminal
+   - geany
+       - command: geany
+   - firefox
+       - command: firefox
+   - ranger
+       - command: gnome-terminal -x ranger
+   - cmus
+       - command: gnome-terminal -x cmus
+   - xvkbd
+       - command: xvkbd
