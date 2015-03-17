@@ -11,32 +11,38 @@ sudo apt-get -y install cmus
 sudo apt-get -y install xvkbd
 
 # Install UCOM and UCOM-ELI.
-mkdir -p ~/ucomsys
-cd ~/ucomsys
+sudo mkdir -p /usr/share/ucom
+cd /usr/share/ucom
 wget https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
 wget https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
 wget https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
 wget https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration.md
 
+# Install CERN-alias.
+cd /usr/share/ucom
+sudo git clone https://github.com/wdbm/CERN-alias.git
+cd /usr/share/ucom/CERN-alias
+sudo rm LICENSE
+sudo rm README.md
+
 ## Set up UCOM launch script.
 IFS= read -d '' sessionScript << "EOF"
 #!/bin/bash
-/usr/bin/python ~/ucomsys/ucom.py &
-/usr/bin/python ~/ucomsys/ucom-eli.py --configuration ~/ucomsys/configuration.md
+/usr/bin/python /usr/share/ucom/ucom.py &
+/usr/bin/python /usr/share/ucom/ucom-eli.py --configuration /usr/share/ucom/configuration.md
 EOF
-echo "${sessionScript}" > ~/ucomsys/ucomsys.sh
-chmod 755 ~/ucomsys/ucomsys.sh
+echo "${sessionScript}" > /usr/share/ucom/ucomsys.sh
+chmod 755 /usr/share/ucom/ucomsys.sh
 
 # Set up UCOM session launcher.
 IFS= read -d '' sessionLauncher << "EOF"
 [Desktop Entry]
 Encoding=UTF-8
 Name=UCOM
-Comment=UCOM - X11 desktop environment
-Exec=/bin/bash ${HOME}/ucomsys/ucomsys.sh
+Comment=UCOM -- X11 desktop environment
+Exec=/bin/bash /usr/share/ucom/ucomsys.sh
 Type=Application
 EOF
-#Exec=/usr/bin/python ${HOME}/ucomsys/ucom.py
 sudo bash -c "echo \"${sessionLauncher}\" > /usr/share/xsessions/UCOM.desktop"
 
 echo "setup complete"

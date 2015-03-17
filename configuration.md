@@ -1,13 +1,30 @@
 - launchers
-   - terminal
-       - command: gnome-terminal
-   - geany
-       - command: geany
-   - firefox
-       - command: firefox
-   - ranger
-       - command: gnome-terminal -x ranger
-   - cmus
-       - command: gnome-terminal -x cmus
-   - xvkbd
-       - command: xvkbd
+    - Chrome
+        - command: Chrome
+        - icon: /usr/share/ucom/icons/Chrome.svg
+    - Geany
+        - icon: /usr/share/ucom/icons/Geany.svg
+    - terminal
+        - command: gnome-terminal
+        - icon: /usr/share/ucom/icons/terminal.svg
+    - Nautilus
+        - command: nautilus
+        - icon: /usr/share/ucom/icons/file.svg
+    - Firefox
+        - command: firefox
+        - icon: /usr/share/ucom/icons/Firefox.svg
+    - Thunderbird
+        - command: thunderbird
+        - icon: /usr/share/ucom/icons/Thunderbird.svg
+    - screenshot
+        - command: screenshot --interactive
+        - icon: /usr/share/ucom/CERN-alias/icons/camera.svg
+    - ranger
+        - command: gnome-terminal -x ranger
+        - icon: /usr/share/ucom/icons/gears.svg
+    - cmus
+        - command: gnome-terminal -x cmus
+        - icon: /usr/share/ucom/icons/speaker.svg
+    - xvkbd
+        - command: xvkbd
+        - icon: /usr/share/ucom/icons/keyboard.svg
