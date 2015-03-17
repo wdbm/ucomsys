@@ -1,30 +1,31 @@
 - launchers
     - Chrome
         - command: Chrome
-        - icon: /usr/share/ucom/icons/Chrome.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/Chrome.svg
     - Geany
-        - icon: /usr/share/ucom/icons/Geany.svg
+        - command: geany
+        - icon: /usr/share/ucom/CERN-alias/icons/Geany.svg
     - terminal
         - command: gnome-terminal
-        - icon: /usr/share/ucom/icons/terminal.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/terminal.svg
     - Nautilus
         - command: nautilus
-        - icon: /usr/share/ucom/icons/file.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/file.svg
     - Firefox
         - command: firefox
-        - icon: /usr/share/ucom/icons/Firefox.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/Firefox.svg
     - Thunderbird
         - command: thunderbird
-        - icon: /usr/share/ucom/icons/Thunderbird.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/Thunderbird.svg
     - screenshot
         - command: screenshot --interactive
         - icon: /usr/share/ucom/CERN-alias/icons/camera.svg
     - ranger
         - command: gnome-terminal -x ranger
-        - icon: /usr/share/ucom/icons/gears.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/gears.svg
     - cmus
         - command: gnome-terminal -x cmus
-        - icon: /usr/share/ucom/icons/speaker.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/speaker.svg
     - xvkbd
         - command: xvkbd
-        - icon: /usr/share/ucom/icons/keyboard.svg
+        - icon: /usr/share/ucom/CERN-alias/icons/keyboard.svg
