@@ -13,10 +13,10 @@ sudo apt-get -y install xvkbd
 # Install UCOM and UCOM-ELI.
 sudo mkdir -p /usr/share/ucom
 cd /usr/share/ucom
-wget https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
-wget https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
-wget https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
-wget https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration.md
+sudo wget https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
+sudo wget https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
+sudo wget https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
+sudo wget https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration.md
 
 # Install CERN-alias.
 cd /usr/share/ucom
@@ -31,8 +31,8 @@ IFS= read -d '' sessionScript << "EOF"
 /usr/bin/python /usr/share/ucom/ucom.py &
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration /usr/share/ucom/configuration.md
 EOF
-echo "${sessionScript}" > /usr/share/ucom/ucomsys.sh
-chmod 755 /usr/share/ucom/ucomsys.sh
+sudo bash -c "echo \"${sessionScript}\" > /usr/share/ucom/ucomsys.sh"
+sudo chmod 755 /usr/share/ucom/ucomsys.sh
 
 # Set up UCOM session launcher.
 IFS= read -d '' sessionLauncher << "EOF"
