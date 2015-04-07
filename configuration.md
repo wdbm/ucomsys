@@ -9,7 +9,7 @@
         - command: gnome-terminal
         - icon: /usr/share/ucom/CERN-alias/icons/terminal.svg
     - Nautilus
-        - command: nautilus
+        - command: nautilus --no-desktop
         - icon: /usr/share/ucom/CERN-alias/icons/file.svg
     - Firefox
         - command: firefox
