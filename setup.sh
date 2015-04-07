@@ -25,7 +25,7 @@ cd /usr/share/ucom/CERN-alias
 sudo rm LICENSE
 sudo rm README.md
 
-## Set up UCOM launch script.
+# Set up UCOM launch script.
 IFS= read -d '' sessionScript << "EOF"
 #!/bin/bash
 /usr/bin/python /usr/share/ucom/ucom.py &
