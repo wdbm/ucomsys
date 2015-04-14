@@ -29,3 +29,6 @@
     - xvkbd
         - command: xvkbd
         - icon: /usr/share/ucom/CERN-alias/icons/keyboard.svg
+    - Screen Keyboard
+        - command: gsettings set org.gnome.desktop.a11y.applications screen-keyboard-enabled true
+        - icon: /usr/share/ucom/CERN-alias/icons/keyboard.svg
