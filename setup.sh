@@ -15,6 +15,9 @@ sudo apt-get -y install xdotool
 sudo mkdir -p /usr/share/ucom
 cd /usr/share/ucom
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/pyprel/master/pyprel.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/shijian/master/shijian.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/technicolor/master/technicolor.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/monx/master/monx.py
@@ -34,7 +37,7 @@ IFS= read -d '' sessionScript << "EOF"
 #!/bin/bash
 /usr/bin/python /usr/share/ucom/ucom.py &
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration=/usr/share/ucom/configuration.md
-/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md
+/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_monx.md
 EOF
 sudo bash -c "echo \"${sessionScript}\" > /usr/share/ucom/ucomsys.sh"
 sudo chmod 755 /usr/share/ucom/ucomsys.sh
