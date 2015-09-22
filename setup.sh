@@ -14,11 +14,11 @@ sudo apt-get -y install xdotool
 # Install UCOM and UCOM-ELI.
 sudo mkdir -p /usr/share/ucom
 cd /usr/share/ucom
-sudo wget https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
-sudo wget https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
-sudo wget https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
-sudo wget https://raw.githubusercontent.com/wdbm/snap/master/snap.py
-sudo wget https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration.md
+sudo wget -N https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/snap/master/snap.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration.md
 
 # Install CERN-alias.
 cd /usr/share/ucom
