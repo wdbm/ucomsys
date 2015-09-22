@@ -17,9 +17,10 @@ cd /usr/share/ucom
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
+sudo wget -N https://raw.githubusercontent.com/wdbm/monx/master/monx.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/snap/master/snap.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration.md
-sudo wget -N https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration_snap.md
+sudo wget -N https://raw.githubusercontent.com/wdbm/ucomsys/master/configuration_monx.md
 
 # Install CERN-alias.
 cd /usr/share/ucom
@@ -33,7 +34,7 @@ IFS= read -d '' sessionScript << "EOF"
 #!/bin/bash
 /usr/bin/python /usr/share/ucom/ucom.py &
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration=/usr/share/ucom/configuration.md
-/usr/bin/python /usr/share/ucom/snap.py --configuration=/usr/share/ucom/configuration_snap.md
+/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md
 EOF
 sudo bash -c "echo \"${sessionScript}\" > /usr/share/ucom/ucomsys.sh"
 sudo chmod 755 /usr/share/ucom/ucomsys.sh
