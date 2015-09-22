@@ -32,3 +32,17 @@
     - Screen Keyboard
         - command: gsettings set org.gnome.desktop.a11y.applications screen-keyboard-enabled true
         - icon: /usr/share/ucom/CERN-alias/icons/keyboard.svg
+
+- event-execution-map
+   - shift-left
+      - description: snap left
+      - command: python snap.py --left
+   - shift-right
+      - description: snap right
+      - command: python snap.py --right
+    - shift-up
+      - description: snap up
+      - command: python snap.py --up
+   - shift-down
+      - description: snap down
+      - command: python snap.py --down
