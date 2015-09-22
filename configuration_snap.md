@@ -1,0 +1,13 @@
+- event-execution-map
+   - shift-left
+      - description: snap left
+      - command: python snap.py --left
+   - shift-right
+      - description: snap right
+      - command: python snap.py --right
+    - shift-up
+      - description: snap up
+      - command: python snap.py --up
+   - shift-down
+      - description: snap down
+      - command: python snap.py --down
