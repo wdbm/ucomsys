@@ -13,6 +13,8 @@ sudo apt-get -y install --only-upgrade xvkbd
 sudo apt-get -y install --only-upgrade xdotool
 sudo apt-get -y install --only-upgrade redshift
 sudo apt-get -y install --only-upgrade python-pip
+sudo pip install propyte --upgrade
+sudo pip install pyfiglet --upgrade
 sudo pip install pyprel --upgrade
 sudo pip install shijian --upgrade
 sudo pip install technicolor --upgrade

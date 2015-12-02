@@ -13,6 +13,8 @@ sudo apt-get -y install xvkbd
 sudo apt-get -y install xdotool
 sudo apt-get -y install redshift
 sudo apt-get -y install python-pip
+sudo pip install propyte
+sudo pip install pyfiglet
 sudo pip install pyprel
 sudo pip install shijian
 sudo pip install technicolor
