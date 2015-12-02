@@ -4,6 +4,7 @@
 sudo apt-get -y install python-docopt
 sudo apt-get -y install python-xlib
 sudo apt-get -y install xphoon
+sudo apt-get -y install maximus
 sudo apt-get -y install geany
 sudo apt-get -y install firefox
 sudo apt-get -y install ranger

@@ -4,6 +4,7 @@
 sudo apt-get -y install --only-upgrade python-docopt
 sudo apt-get -y install --only-upgrade python-xlib
 sudo apt-get -y install --only-upgrade xphoon
+sudo apt-get -y install --only-upgrade maximus
 sudo apt-get -y install --only-upgrade geany
 sudo apt-get -y install --only-upgrade firefox
 sudo apt-get -y install --only-upgrade ranger
