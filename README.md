@@ -1,6 +1,6 @@
 # ucomsys
 
-a setup procedure for UCOM
+a setup procedure for [UCOM](https://github.com/wdbm/ucom)
 
 # overview
 
