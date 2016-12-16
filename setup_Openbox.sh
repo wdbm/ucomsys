@@ -35,15 +35,12 @@ sudo wget -N https://raw.githubusercontent.com/wdbm/snap/master/snap.py
 cd /usr/share/ucom
 sudo git clone https://github.com/wdbm/CERN-alias.git
 
-# Set up UCOM launch script.
-IFS= read -d '' session_script << "EOF"
-#!/bin/bash
-/usr/bin/openbox-session &
+# Set up UCOM OpenBox startup applications.
+IFS= read -d '' startup_applications << "EOF"
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration=/usr/share/ucom/CERN-alias/configuration/configuration_ucom.md
-/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md
+#/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md
 EOF
-sudo bash -c "echo \"${session_script}\" > /usr/share/ucom/ucomsys.sh"
-sudo chmod 755 /usr/share/ucom/ucomsys.sh
+sudo bash -c "echo \"${startup_applications}\" > /etc/xdg/openbox/autostart"
 
 # Set up UCOM session launcher.
 IFS= read -d '' session_launcher << "EOF"
@@ -51,7 +48,7 @@ IFS= read -d '' session_launcher << "EOF"
 Encoding=UTF-8
 Name=UCOM
 Comment=UCOM -- X11 desktop environment
-Exec=/bin/bash /usr/share/ucom/ucomsys.sh
+Exec=/usr/bin/openbox-session
 Type=Application
 EOF
 sudo bash -c "echo \"${session_launcher}\" > /usr/share/xsessions/UCOM.desktop"
