@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install prerequisites.
+sudo apt-get -y install openbox
 sudo apt-get -y install python-docopt
 sudo apt-get -y install python-xlib
 sudo apt-get -y install xphoon
@@ -37,7 +38,7 @@ sudo git clone https://github.com/wdbm/CERN-alias.git
 # Set up UCOM launch script.
 IFS= read -d '' session_script << "EOF"
 #!/bin/bash
-/usr/bin/python /usr/share/ucom/ucom.py &
+/usr/bin/openbox-session &
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration=/usr/share/ucom/CERN-alias/configuration/configuration_ucom.md
 /usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md
 EOF
