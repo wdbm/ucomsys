@@ -45,12 +45,13 @@ fi
 
 # Set up UCOM OpenBox startup applications.
 IFS= read -d '' startup_applications << "EOF"
-feh --bg-fill /usr/share/ucom/CERN-alias/wallpaper7680_4320_CERN_ffffff_3861aa.png &
+feh --bg-fill /usr/share/ucom/CERN-alias/wallpaper/7680_4320_CERN_ffffff_3861aa.png &
 /usr/bin/python /usr/share/ucom/ucom-panel.py &
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration=/usr/share/ucom/CERN-alias/configuration/configuration_ucom.md &
 #/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md &
 EOF
-sudo bash -c "echo \"${startup_applications}\" > /etc/xdg/openbox/autostart"
+#sudo bash -c "echo \"${startup_applications}\" > /etc/xdg/openbox/autostart"
+sudo bash -c "echo \"${startup_applications}\" > /etc/X11/openbox/autostart"
 
 # Set up UCOM session launcher.
 IFS= read -d '' session_launcher << "EOF"
