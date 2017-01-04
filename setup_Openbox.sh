@@ -45,7 +45,7 @@ fi
 # Set up UCOM OpenBox startup applications.
 IFS= read -d '' startup_applications << "EOF"
 feh --bg-fill /usr/share/ucom/CERN-alias/wallpaper/7680_4320_CERN_ffffff_3861aa.png &
-/usr/bin/python /usr/share/ucom/ucom-panel.py &
+#/usr/bin/python /usr/share/ucom/ucom-panel.py &
 /usr/bin/python /usr/share/ucom/ucom-eli.py --configuration=/usr/share/ucom/CERN-alias/configuration/configuration_ucom.md &
 #/usr/bin/python /usr/share/ucom/monx.py --configuration=/usr/share/ucom/configuration_snap.md &
 EOF
