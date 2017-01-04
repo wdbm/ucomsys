@@ -25,7 +25,6 @@ sudo pip install technicolor
 sudo mkdir -p /usr/share/ucom
 cd /usr/share/ucom
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom/master/ucom.py
-sudo wget -N https://raw.githubusercontent.com/wdbm/pyrecon/master/pyrecon.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom-eli/master/ucom-eli.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/ucom-panel/master/ucom-panel.py
 sudo wget -N https://raw.githubusercontent.com/wdbm/monx/master/monx.py
